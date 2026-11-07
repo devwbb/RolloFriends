@@ -115,8 +115,8 @@ distribution choice is documented in
 Target version: `0.2.0-beta.1` (Python package `0.2.0b1`).
 
 The public beta branch is an independent root history. Do not merge the
-internal main branch into it. The release metadata URL placeholders must be
-replaced with the actual repository values before publication.
+internal main branch into it. The public repository and target URLs are
+configured; tagging and Marketplace publication remain pending.
 
 Do not create a remote, tag, release, or Marketplace entry without explicit
 approval.

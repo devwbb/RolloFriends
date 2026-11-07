@@ -6,14 +6,15 @@ future public Marketplace/HACS release.
 ## Current decision
 
 Public beta version target: **0.2.0-beta.1**.
-GitHub target: **`devwbb/RolloFriends`** (not created yet).
+GitHub repository: **`devwbb/RolloFriends`** (public `main`; no release/tag yet).
 
 - **Local beta:** approved for controlled testing on the current HA test VM.
 - **Technical recommendation:** conditional **Go** for a limited public beta,
   after the public-distribution gates below are completed.
 - **Unrestricted production release:** no.
 - **Public beta publication approval:** not yet given.
-- **Remote repository / release / Marketplace entry:** none.
+- **Remote repository:** exists (public `main`).
+- **Release tag / Marketplace entry:** none.
 
 ## Functional and safety gates
 
@@ -54,15 +55,14 @@ GitHub target: **`devwbb/RolloFriends`** (not created yet).
 - [x] Git working tree clean and no credentials or local artifacts staged.
 - [ ] Keep the public `public-beta` branch as an independent root history; do
       not merge the internal main branch.
-- [ ] Run the public HACS/hassfest validation against the eventual GitHub
-      repository.
+- [x] Run the public HACS/hassfest validation against the GitHub repository.
 
 ## Public distribution gates
 
-- [ ] Create the public GitHub repository `devwbb/RolloFriends`.
+- [x] Create the public GitHub repository `devwbb/RolloFriends`.
 - [ ] Verify `codeowners`, documentation URL and issue-tracker URL.
 - [ ] Create a release/tag and update `manifest.json`/`CHANGELOG.md`.
-- [ ] Validate the repository with HACS/Marketplace and hassfest.
+- [x] Validate the repository with HACS/Marketplace action and hassfest.
 - [ ] Review the README/installation instructions against the actual release.
 - [ ] Verify no `.env`, tokens, private hostnames, or test artifacts are in the
       release tag.

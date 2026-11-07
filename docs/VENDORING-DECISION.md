@@ -48,8 +48,8 @@ chosen with explicit synchronization and release automation.
 
 ## Recommendation
 
-For the first public beta, keep vendoring until the repository, release process,
-and HACS validation are stable. If independent library consumption or standard
+For the first public beta, keep vendoring until the release process and HACS/Marketplace
+publication are stable. If independent library consumption or standard
 HA dependency management becomes a requirement, publish `aiosmartfriends` to
 PyPI and switch the manifest to an exact pin, while retaining the sync test
 during a transition period.

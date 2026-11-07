@@ -6,8 +6,8 @@ supported shutters as Home Assistant cover entities.
 
 Current beta version: **0.2.0-beta.1**.
 
-Target public repository: <https://github.com/devwbb/RolloFriends> (repository
-not created or published yet).
+Public repository: <https://github.com/devwbb/RolloFriends> (public `main`
+exists; no release/tag or Marketplace entry yet).
 
 The integration bundles a byte-identical copy of the standalone
 `aiosmartfriends` library. The canonical library source lives under
@@ -21,7 +21,7 @@ The integration bundles a byte-identical copy of the standalone
 | Library and integration tests | 98 automated tests passing |
 | Read-only box verification | Login and full snapshot; exact component and shutter counts are not published |
 | Approved movement tests | A limited subset of shutters in the local test environment |
-| Public Marketplace/HACS distribution | **Not published and not approved** |
+| Public distribution | Public GitHub repository; no release/Marketplace entry yet |
 | Overall beta readiness | Local beta candidate; public release preparation in progress |
 
 The project is not affiliated with SmartFriends, Schellenberg, Enexoma, or Home
@@ -69,10 +69,9 @@ See [`docs/INSTALLATION.md`](docs/INSTALLATION.md) for local installation,
 updates, troubleshooting, and credentials handling.
 
 Home Assistant 2026.11 includes HACS as the built-in **Marketplace**. HACS and
-the Marketplace only manage public GitHub repositories. The planned repository
-is `devwbb/RolloFriends`; it is not created or published yet. Do not add it as a
-public integration until the repository, release, documentation URL, and
-explicit approval exist.
+the Marketplace only manage public GitHub repositories. The repository
+`devwbb/RolloFriends` is public, with the cleaned `main` branch. A release/tag
+and Marketplace/HACS entry have not been published yet.
 
 The box advertises its service as `_smartHOME._tcp.local.` with an uppercase
 `HOME`; the manifest lists both that spelling and the lower-case form.
@@ -163,13 +162,13 @@ not part of the public tree. See:
   integration marks a changed endpoint as `superseded`; it does not claim an
   immutable final position.
 - Adjustable position components are exposed as assumed-state.
-- Public Marketplace/HACS distribution has not yet been created or approved.
+- The public repository exists, but no release/tag or Marketplace/HACS entry has been published yet.
 
 ## Development
 
 See [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md) for the repository layout,
 development environment, architecture, test commands, live-test safety rules,
-and the future public-release checklist.
+and the public-release checklist.
 
 ## License
 

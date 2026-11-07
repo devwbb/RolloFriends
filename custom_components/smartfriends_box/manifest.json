@@ -1,6 +1,10 @@
 {
   "domain": "smartfriends_box",
   "name": "RolloFriends",
+  "categories": [
+    "blinds_curtains",
+    "hubs_protocols"
+  ],
   "codeowners": [
     "@devwbb"
   ],

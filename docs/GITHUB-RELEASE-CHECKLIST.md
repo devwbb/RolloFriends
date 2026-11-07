@@ -6,7 +6,7 @@ the remote repository or publishing anything.
 ## Release identity
 
 - [x] Repository owner and codeowner confirmed as `devwbb`.
-- [ ] Public repository `devwbb/RolloFriends` created.
+- [x] Public repository `devwbb/RolloFriends` created.
 - [ ] `manifest.json` documentation and issue-tracker URLs resolve.
 - [ ] Repository target remains `https://github.com/devwbb/RolloFriends`.
 - [ ] Version set consistently:
@@ -55,8 +55,8 @@ the remote repository or publishing anything.
 - [ ] Push only after explicit approval.
 - [ ] Create annotated tag `v0.2.0-beta.1` and a pre-release entry.
 - [ ] Include scope, tested devices, known limitations, and installation notes
-      in the release notes.
-- [ ] Run HACS/Marketplace validation against the real repository.
+      from `RELEASE-NOTES-0.2.0-beta.1.md`.
+- [x] Run HACS/Marketplace action validation against the real repository.
 - [ ] Run hassfest or the current Home Assistant validation workflow.
 - [ ] Add the repository to HACS/Marketplace and test a clean install.
 - [ ] Confirm upgrade from `0.1.0` to `0.2.0-beta.1` if an older entry exists.

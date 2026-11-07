@@ -61,19 +61,19 @@ This distinction matters:
 | Mode | Status | Requirements |
 |---|---|---|
 | Local `custom_components` test | Available now | Copy the directory and restart |
-| Public Home Assistant Marketplace/HACS | Not available yet | Public GitHub repository, release/tag, published documentation and issue tracker, publication approval |
+| Public Home Assistant Marketplace/HACS | Repository public; release entry pending | Public GitHub repository, release/tag, published documentation and issue tracker, publication approval |
 
 Home Assistant 2026.11 includes HACS as the built-in **Marketplace**. HACS and
 the Marketplace only manage public GitHub repositories. The current
 `manifest.json` documentation and issue-tracker URLs point to
-`https://github.com/devwbb/RolloFriends`, but that repository does not exist yet.
-Do not announce or install this as a public integration until the repository,
-release, and approval exist.
+`https://github.com/devwbb/RolloFriends`; the repository is public. A release/tag
+and Marketplace/HACS entry do not exist yet. Do not announce or install this as a
+published integration until the release and approval exist.
 
 HACS expects one integration below `custom_components/<domain>/`, a root
-`hacs.json`, a `brand/icon.png`, and a valid manifest. Those files are present;
-the remaining blockers are the public repository, release, and documentation
-URLs.
+`hacs.json`, a `brand/icon.png`, and a valid manifest. Those files are present
+and the public repository is live; the remaining blockers are a release/tag and
+the Marketplace/HACS listing approval.
 
 ## Credentials and privacy
 

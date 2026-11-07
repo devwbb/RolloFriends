@@ -29,8 +29,8 @@ All notable changes to RolloFriends are documented here. The project follows
   shutter is unavailable.
 - A later box measurement can arrive after a stop was confirmed; the
   integration marks a changed endpoint as `superseded`.
-- Public Marketplace/HACS distribution, repository, tag, and approval are still
-  pending.
+- The public GitHub repository exists, but the release tag and Marketplace/HACS
+  entry are still pending.
 
 ## [0.1.0] - 2026-11-07
 
@@ -58,8 +58,8 @@ All notable changes to RolloFriends are documented here. The project follows
 - Only a limited subset of approved test shutters has been exercised with movement commands.
 - Radio feedback can be delayed substantially, on some devices; the
   integration does not invent positions or retry commands.
-- Public distribution has not been prepared: no remote repository, release, or
-  Marketplace/HACS publication exists yet.
+- At the 0.1.0 local snapshot, public distribution had not been prepared. The
+  0.2.0-beta.1 public repository supersedes this limitation.
 
 [0.2.0-beta.1]: https://github.com/devwbb/RolloFriends/compare/v0.1.0...v0.2.0-beta.1
 [0.1.0]: https://github.com/devwbb/RolloFriends/releases/tag/v0.1.0

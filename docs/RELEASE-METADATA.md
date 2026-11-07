@@ -1,7 +1,7 @@
-# Public beta release metadata (prepared, not published)
+# Public beta release metadata (prepared, not released)
 
-The public repository target is **`devwbb/RolloFriends`**. It has not been
-created, pushed, tagged, or published yet.
+The public repository is **`devwbb/RolloFriends`**. Its cleaned `main` branch is
+published; no release tag or GitHub release has been created.
 
 ## Identity
 
@@ -18,9 +18,8 @@ created, pushed, tagged, or published yet.
 | Issue tracker URL | `https://github.com/devwbb/RolloFriends/issues` |
 | Release type | pre-release |
 
-The manifest and changelog now point to the confirmed target repository. The
-repository itself does not exist yet; creation and publication require separate
-approval.
+The manifest and changelog point to the public repository. Tagging and
+publishing the release require separate approval.
 
 ## Release title and summary
 
@@ -47,6 +46,7 @@ Suggested pre-release summary:
 - [ ] No credentials, private addresses, internal evidence, or personal
       environment details are included.
 - [ ] Link to `docs/VALIDATION.md` and `docs/BETA-CHECKLIST.md`.
+- [ ] Use `docs/RELEASE-NOTES-0.2.0-beta.1.md` as the release body.
 - [ ] Upgrade/rollback instructions are present.
 - [ ] Pre-release flag is set.
 
@@ -58,8 +58,8 @@ Suggested pre-release summary:
 - [ ] `brand/icon.png` is present.
 - [ ] The repository contains exactly one integration below
       `custom_components/`.
-- [ ] HACS/Marketplace validation passes against the real repository.
+- [x] HACS/Marketplace action validation passes against the real repository.
 - [ ] The release tag is visible to the Marketplace/HACS release selector.
 
-Do not create the repository, tag, release, or Marketplace entry until the
-release checklist and explicit publication approval are complete.
+The repository exists. Do not create the tag, release, or Marketplace entry
+until the release checklist and explicit publication approval are complete.

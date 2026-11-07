@@ -59,8 +59,8 @@ Repeated long-running RF diagnostics are not part of the release tests.
 - Adjustable position components are reported as assumed-state.
 - The integration is local-only and does not implement pairing, scenes, groups,
   firmware updates, or account management.
-- The public distribution repository, release, and Marketplace/HACS approval do
-  not exist yet.
+- The public GitHub repository exists, but a release tag and Marketplace/HACS
+  publication have not been created yet.
 
 ## Evidence
 

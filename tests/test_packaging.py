@@ -24,6 +24,7 @@ def test_manifest_is_valid() -> None:
     manifest = json.loads((INTEGRATION / "manifest.json").read_text())
     assert manifest["domain"] == "smartfriends_box"
     assert manifest["name"] == "RolloFriends"
+    assert manifest["categories"] == ["blinds_curtains", "hubs_protocols"]
     assert manifest["config_flow"] is True
     assert manifest["version"] == "0.2.0-beta.1"
     project = tomllib.loads((ROOT / "pyproject.toml").read_text())
