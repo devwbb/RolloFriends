@@ -6,12 +6,45 @@ supported shutters as Home Assistant cover entities.
 
 Current beta version: **0.2.0-beta.1**.
 
-Public repository: <https://github.com/devwbb/RolloFriends> (public `main`
-exists; no release/tag or Marketplace entry yet).
+Public repository: <https://github.com/devwbb/RolloFriends>
+Public pre-release: <https://github.com/devwbb/RolloFriends/releases/tag/v0.2.0-beta.1>
 
 The integration bundles a byte-identical copy of the standalone
 `aiosmartfriends` library. The canonical library source lives under
 `src/aiosmartfriends`; `scripts/sync_vendor.py` refreshes the bundled copy.
+
+## Installation via Home Assistant Marketplace
+
+Home Assistant **2026.11** includes the **Marketplace** directly. HACS is no
+longer a separate installation step, although the repository continues to ship
+`hacs.json` and is checked by the HACS action.
+
+1. Open **Settings → Marketplace**.
+2. Open the **Add from link** tab.
+3. Enter `https://github.com/devwbb/RolloFriends`.
+4. Select **Integration** as the type and select **Add**.
+5. If the Marketplace asks for a GitHub connection, connect GitHub and then
+   continue. Custom repositories cannot be added without it.
+6. Open the RolloFriends repository page and use the overflow menu to select
+   **Include pre-releases**.
+7. Install version **0.2.0-beta.1**. If it is not preselected, choose
+   **Install another version** and select `0.2.0-beta.1`.
+8. Restart Home Assistant when the Marketplace asks for it.
+9. Open **Settings → Devices & services → Add integration** and select
+   **RolloFriends** (the setup dialog is titled “Connect SmartFriends Box”).
+10. Enter the SmartFriends Box address, port `4300`, username, and password.
+
+Direct Marketplace link:
+
+<https://my.home-assistant.io/redirect/marketplace_repository/?owner=devwbb&repository=RolloFriends&category=integration>
+
+The box must be reachable from Home Assistant on TCP port `4300`. Setup only
+logs in and reads one full snapshot; it does not move a shutter. Existing config
+entries are preserved when the integration is updated after a restart.
+
+More details, manual installation, updates, and troubleshooting:
+[`docs/INSTALLATION.md`](docs/INSTALLATION.md).
+
 
 ## Status and beta readiness
 
@@ -21,7 +54,7 @@ The integration bundles a byte-identical copy of the standalone
 | Library and integration tests | 98 automated tests passing |
 | Read-only box verification | Login and full snapshot; exact component and shutter counts are not published |
 | Approved movement tests | A limited subset of shutters in the local test environment |
-| Public distribution | Public GitHub repository; no release/Marketplace entry yet |
+| Public distribution | GitHub pre-release `v0.2.0-beta.1`; Marketplace custom-repository install path |
 | Overall beta readiness | Local beta candidate; public release preparation in progress |
 
 The project is not affiliated with SmartFriends, Schellenberg, Enexoma, or Home
@@ -65,13 +98,15 @@ physical endpoint. `valueTarget` is treated only as a goal.
 
 ## Installation
 
-See [`docs/INSTALLATION.md`](docs/INSTALLATION.md) for local installation,
-updates, troubleshooting, and credentials handling.
+The primary installation method is the integrated Home Assistant Marketplace
+described above. Manual installation remains available for development and
+offline testing:
 
-Home Assistant 2026.11 includes HACS as the built-in **Marketplace**. HACS and
-the Marketplace only manage public GitHub repositories. The repository
-`devwbb/RolloFriends` is public, with the cleaned `main` branch. A release/tag
-and Marketplace/HACS entry have not been published yet.
+1. Copy `custom_components/smartfriends_box` into
+   `/config/custom_components/smartfriends_box`.
+2. Run `ha core check`.
+3. Restart Home Assistant.
+4. Add **RolloFriends** under **Settings → Devices & services**.
 
 The box advertises its service as `_smartHOME._tcp.local.` with an uppercase
 `HOME`; the manifest lists both that spelling and the lower-case form.
@@ -162,7 +197,7 @@ not part of the public tree. See:
   integration marks a changed endpoint as `superseded`; it does not claim an
   immutable final position.
 - Adjustable position components are exposed as assumed-state.
-- The public repository exists, but no release/tag or Marketplace/HACS entry has been published yet.
+- The GitHub pre-release exists. The Marketplace custom-repository installation path still requires a Marketplace GitHub connection and was not exercised on the test VM.
 
 ## Development
 

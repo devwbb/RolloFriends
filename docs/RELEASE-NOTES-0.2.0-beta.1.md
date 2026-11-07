@@ -32,8 +32,9 @@ Home Assistant.
 
 ## Installation
 
-Use the Home Assistant Marketplace/HACS path after the release is published, or
-copy `custom_components/smartfriends_box` into the Home Assistant configuration.
+Use the integrated Home Assistant 2026.11 Marketplace (Settings → Marketplace →
+Add from link) or copy `custom_components/smartfriends_box` into the Home
+Assistant configuration for manual testing.
 Setup performs a login and one full snapshot without moving a shutter.
 
 ## Validation
@@ -44,4 +45,4 @@ Setup performs a login and one full snapshot without moving a shutter.
 - HACS repository checks passing.
 - Local Home Assistant restart and reconnect validation completed.
 
-No GitHub release or tag has been published yet.
+This is the first public beta release.

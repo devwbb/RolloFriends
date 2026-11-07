@@ -1,8 +1,9 @@
 # Installation
 
 RolloFriends is a Home Assistant custom integration for the SmartFriends Box.
-The target version is **0.2.0-beta.1**. It is currently a **local beta
-candidate**, not a published Marketplace/HACS integration.
+The current beta is **0.2.0-beta.1**. Home Assistant 2026.11 includes the
+**Marketplace**; a separate HACS installation is not required. The repository
+remains compatible with `hacs.json` and the HACS action.
 
 ## Requirements
 
@@ -14,6 +15,42 @@ candidate**, not a published Marketplace/HACS integration.
   component.
 - No Python package installation is required: the `aiosmartfriends` client is
   bundled under `custom_components/smartfriends_box/vendor`.
+
+## Installation via Home Assistant Marketplace
+
+1. Open **Settings → Marketplace**.
+2. Open the **Add from link** tab.
+3. Enter `https://github.com/devwbb/RolloFriends`.
+4. Select **Integration** as the type and select **Add**.
+5. If prompted, connect GitHub. The Marketplace requires this connection to add
+   a custom repository.
+6. Open the RolloFriends repository page and select **Include pre-releases** from
+   the overflow menu.
+7. Install **0.2.0-beta.1**. If necessary, use **Install another version** and
+   select the beta explicitly.
+8. Restart Home Assistant when prompted.
+9. Open **Settings → Devices & services → Add integration** and select
+   **RolloFriends**. The setup dialog is titled “Connect SmartFriends Box”.
+10. Enter host/IP, port `4300`, SmartFriends username, and password.
+
+Direct Marketplace link:
+
+<https://my.home-assistant.io/redirect/marketplace_repository/?owner=devwbb&repository=RolloFriends&category=integration>
+
+Setup performs a login and one full snapshot without moving a shutter. Updates
+installed through the Marketplace keep the existing config entry; restart Home
+Assistant after an update.
+
+### Beta limitations
+
+- The integration exposes the SmartFriends Box cover entities found in the reference environment.
+- Real movement commands have been exercised on a limited subset of cover entities only.
+- RSSI 0/3 is not a standalone availability indicator. Connection freshness,
+  radio quality, and position validity are separate.
+- Position feedback can be delayed; a later measurement can arrive after a stop
+  was confirmed.
+- Unconfirmed device commands are never retried automatically.
+- Adjustable position devices are exposed as assumed-state.
 
 ## Manual local installation
 
@@ -54,26 +91,21 @@ python3 scripts/sync_vendor.py
 .venv/bin/python -m pytest tests/test_packaging.py -q
 ```
 
-## Public Marketplace / HACS distribution
+## Marketplace distribution
 
 This distinction matters:
 
 | Mode | Status | Requirements |
 |---|---|---|
 | Local `custom_components` test | Available now | Copy the directory and restart |
-| Public Home Assistant Marketplace/HACS | Repository public; release entry pending | Public GitHub repository, release/tag, published documentation and issue tracker, publication approval |
+| Home Assistant Marketplace | GitHub pre-release published | Marketplace GitHub connection for custom repository; custom-repository install pending validation |
 
-Home Assistant 2026.11 includes HACS as the built-in **Marketplace**. HACS and
-the Marketplace only manage public GitHub repositories. The current
-`manifest.json` documentation and issue-tracker URLs point to
-`https://github.com/devwbb/RolloFriends`; the repository is public. A release/tag
-and Marketplace/HACS entry do not exist yet. Do not announce or install this as a
-published integration until the release and approval exist.
-
-HACS expects one integration below `custom_components/<domain>/`, a root
-`hacs.json`, a `brand/icon.png`, and a valid manifest. Those files are present
-and the public repository is live; the remaining blockers are a release/tag and
-the Marketplace/HACS listing approval.
+Home Assistant 2026.11 includes the **Marketplace** directly. The GitHub
+pre-release `v0.2.0-beta.1` is published. Adding the repository as a custom
+repository requires a GitHub connection in the Marketplace; without it the
+Marketplace cannot add custom repositories. The public repository contains one
+integration below `custom_components/<domain>/`, a root `hacs.json`, a
+`brand/icon.png`, and a valid manifest, and the HACS action passes.
 
 ## Credentials and privacy
 
