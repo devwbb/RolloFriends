@@ -21,7 +21,8 @@ Home Assistant.
 ## Known limitations
 
 - The reference environment exposes multiple cover entities.
-- Real movement commands have been exercised on a limited subset of cover entities only.
+- Real movement commands have been exercised on a limited subset of cover
+  entities only.
 - RSSI 0/3 is not a standalone availability indicator. The integration evaluates
   connection freshness, radio quality, and position validity separately.
 - Position feedback can be delayed; a later measurement may arrive after a stop

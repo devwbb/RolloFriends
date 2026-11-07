@@ -1,8 +1,9 @@
 # Validation summary
 
 RolloFriends was validated against a SmartFriends Box and Home Assistant
-2026.11.0 in a local test environment. Internal device labels, room names, and
-component identifiers are intentionally omitted from this public summary.
+2026.11.0 in a local test environment. Internal device labels, room names,
+component identifiers, and exact device counts are intentionally omitted from
+this public summary.
 
 ## Automated checks
 
@@ -17,9 +18,10 @@ component identifiers are intentionally omitted from this public summary.
 ## Live validation, generic summary
 
 - Read-only login and full snapshot completed.
-- The integration loaded the expected cover entities after multiple controlled Home Assistant restarts.
-- A limited set of approved test shutters was used for movement tests. Other shutters were
-  not commanded.
+- The integration loaded the expected cover entities after multiple controlled
+  Home Assistant restarts.
+- A limited set of approved test shutters was used for movement tests. Other
+  shutters were not commanded.
 - Target positions, stop commands, `valueTarget` handling, delayed positions,
   and stale/unknown states were observed.
 - Stop settling was observed as `awaiting_motor_stop → settling → confirmed`.
@@ -52,8 +54,8 @@ Repeated long-running RF diagnostics are not part of the release tests.
 
 ## Known limitations
 
-- Only a limited subset of shutters has been exercised with movement commands. Other devices
-  may expose different timing or position semantics.
+- Only a limited subset of shutters has been exercised with movement commands.
+  Other devices may expose different timing or position semantics.
 - Radio feedback can be delayed substantially; a later measurement may arrive
   after a stop was confirmed.
 - Adjustable position components are reported as assumed-state.

@@ -18,7 +18,8 @@ GitHub repository: **`devwbb/RolloFriends`** (public `main`; no release/tag yet)
 
 ## Functional and safety gates
 
-- [x] Home Assistant 2026.11.0 loads the integration and the expected cover entities.
+- [x] Home Assistant 2026.11.0 loads the integration and the expected cover
+      entities.
 - [x] Login and full snapshot verified.
 - [x] TLS pinning, digest authentication and mDNS identity probe tested.
 - [x] Config flow and reconfigure form exercised live; reauth paths covered by
@@ -33,7 +34,8 @@ GitHub repository: **`devwbb/RolloFriends`** (public `main`; no release/tag yet)
       settling sequence with an approved live stop test.
 - [ ] Re-test the refined same-value late-position path live; the command budget
       was exhausted after the initial trips per device.
-- [x] Verify the cover entities and a connected/fresh integration after HA restarts.
+- [x] Verify the cover entities and a connected/fresh integration after HA
+      restarts.
 - [x] Verify version `0.2.0-beta.1` loads in the manifest; Python package is
       `0.2.0b1`.
 - [x] Verify RSSI 0 does not make the connection or a shutter unavailable.
@@ -41,7 +43,8 @@ GitHub repository: **`devwbb/RolloFriends`** (public `main`; no release/tag yet)
       from the public tree; keep them in the ignored local `internal/` folder.
 - [ ] Re-run the pending → confirmed validation on the approved test shutters after the stop correction.
 - [ ] Clarify the external controller causing the unrelated shutter movements.
-- [ ] Movement-test at least a representative subset of the remaining shutters before claiming general device support.
+- [ ] Movement-test at least a representative subset of the remaining
+      shutters before claiming general device support.
 - [ ] Decide whether to publish `aiosmartfriends` to PyPI or keep the vendored
       copy for the public package.
 

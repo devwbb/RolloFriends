@@ -78,8 +78,9 @@ Assistant. It is an independent protocol implementation.
 ## Supported devices
 
 The integration imports every master device with a `rollingShutter` component.
-The reference box exposes multiple such devices, including Rollodrive and radio receiver switches. A position component is optional; devices without one expose open,
-close and stop only.
+The reference box exposes multiple such devices, including Rollodrive and radio
+receiver switches. A position component is optional; devices without one expose
+open, close and stop only.
 
 SmartFriends reports positions as **0 = open, 100 = closed**. Home Assistant uses
 the inverse convention. The conversion is performed exactly once at the entity
@@ -187,8 +188,8 @@ not part of the public tree. See:
 
 ## Known limitations
 
-- Only a limited subset of shutters has been exercised with movement commands. Other devices
-  may have different timing or position semantics.
+- Only a limited subset of shutters has been exercised with movement commands.
+  Other devices may have different timing or position semantics.
 - RSSI may alternate between 0 and 3, and position feedback can be delayed.
   These are known device/radio properties. RSSI 0 alone does not mean the box
   connection or a shutter is unavailable; connection freshness, radio quality,

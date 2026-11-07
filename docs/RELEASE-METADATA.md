@@ -31,9 +31,9 @@ Suggested pre-release summary:
 
 > First limited public beta of the native SmartFriends Box integration. Includes
 > pinned TLS, config flows, discovery, cover entities, diagnostics, and separate
-> motor/fresh-position/stop-finality state handling. Only a limited subset of test shutters has
-> been exercised with movement commands; RSSI 0 and delayed position feedback
-> are known box/radio properties.
+> motor/fresh-position/stop-finality state handling. Only a limited subset of
+> test shutters has been exercised with movement commands; RSSI 0 and delayed
+> position feedback are known box/radio properties.
 
 ## Release notes checklist
 

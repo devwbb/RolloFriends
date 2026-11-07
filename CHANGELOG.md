@@ -17,13 +17,15 @@ All notable changes to RolloFriends are documented here. The project follows
   measured positions reset the window.
 - Regression coverage for stale STOPPED feedback, delayed stop positions, and
   parallel-client session expiry without command replay.
-- Phase-6 installation and live validation on the HA test VM: approved stop trips observed `awaiting_motor_stop -> settling -> confirmed`, with
+- Phase-6 installation and live validation on the HA test VM: approved stop
+  trips observed `awaiting_motor_stop -> settling -> confirmed`, with
   10-second settling windows; late same-value updates no longer supersede a
   confirmed stop.
 
 ### Known limitations
 
-- Only a limited subset of test shutters has been exercised with movement commands.
+- Only a limited subset of test shutters has been exercised with movement
+  commands.
 - RSSI values may alternate between 0 and 3 and position feedback may be
   delayed; these are known box/radio properties, not proof that a connection or
   shutter is unavailable.
@@ -55,7 +57,8 @@ All notable changes to RolloFriends are documented here. The project follows
 
 ### Known limitations
 
-- Only a limited subset of approved test shutters has been exercised with movement commands.
+- Only a limited subset of approved test shutters has been exercised with
+  movement commands.
 - Radio feedback can be delayed substantially, on some devices; the
   integration does not invent positions or retry commands.
 - At the 0.1.0 local snapshot, public distribution had not been prepared. The

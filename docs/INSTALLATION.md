@@ -43,8 +43,10 @@ Assistant after an update.
 
 ### Beta limitations
 
-- The integration exposes the SmartFriends Box cover entities found in the reference environment.
-- Real movement commands have been exercised on a limited subset of cover entities only.
+- The integration exposes the SmartFriends Box cover entities found in the
+  reference environment.
+- Real movement commands have been exercised on a limited subset of cover
+  entities only.
 - RSSI 0/3 is not a standalone availability indicator. Connection freshness,
   radio quality, and position validity are separate.
 - Position feedback can be delayed; a later measurement can arrive after a stop
