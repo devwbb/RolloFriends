@@ -205,6 +205,25 @@ See [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md) for the repository layout,
 development environment, architecture, test commands, live-test safety rules,
 and the public-release checklist.
 
+## Credits and protocol references
+
+RolloFriends is an independent implementation. It was informed by the following
+third-party protocol work; the full statements and license details are in
+[`NOTICE.md`](NOTICE.md):
+
+- [`LoPablo/smartFriendsApi`](https://github.com/LoPablo/smartFriendsApi)
+  (ISC, Copyright 2020 Pascâl Hartmann) — protocol reference for the box port,
+  TLS trust anchor, digest authentication, `helo`/`login`/`getAllNewInfos`/
+  `setDeviceValue`, and newline framing.
+- [`GimpArm/smartfriends-bridge`](https://github.com/GimpArm/smartfriends-bridge)
+  (GPL-3.0) — behavioral reference for the observed message structure,
+  master/component grouping, command values, and the position inversion used by
+  its MQTT template. No code was copied or translated.
+
+A self-contained copy of the notice ships with the integration in
+[`custom_components/smartfriends_box/NOTICE.md`](custom_components/smartfriends_box/NOTICE.md)
+for manual installations that copy only the component directory.
+
 ## License
 
 MIT. See [`LICENSE`](LICENSE) and [`NOTICE.md`](NOTICE.md).

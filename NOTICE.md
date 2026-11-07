@@ -3,6 +3,10 @@
 RolloFriends is an independent implementation. It contains no source code from
 the GPL-licensed `GimpArm/smartfriends-bridge` project.
 
+`custom_components/smartfriends_box/NOTICE.md` contains a self-contained copy
+of these notices, including the MIT license text, for manual installations that
+copy only the component directory.
+
 ## Protocol references
 
 - `LoPablo/smartFriendsApi` (ISC, Copyright 2020 Pascâl Hartmann) was used as a
