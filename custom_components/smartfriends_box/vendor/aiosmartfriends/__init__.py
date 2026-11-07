@@ -1,0 +1,91 @@
+"""Async client and protocol models for the SmartFriends Box."""
+
+from __future__ import annotations
+
+from .client import (
+    EVENT_AUTH_FAILED,
+    EVENT_CONFIG_CHANGED,
+    EVENT_CONNECTION,
+    EVENT_DEVICE_INFO,
+    EVENT_DEVICE_VALUE,
+    EVENT_ERROR,
+    EVENT_ROOM,
+    EVENT_SNAPSHOT,
+    ClientEvent,
+    SmartFriendsClient,
+)
+from .discovery import MdnsIdentity, async_probe_identity, normalize_mac, parse_mdns_identity
+from .exceptions import (
+    SmartFriendsAuthenticationError,
+    SmartFriendsCancelled,
+    SmartFriendsCertificateError,
+    SmartFriendsCommandRejected,
+    SmartFriendsConnectionError,
+    SmartFriendsError,
+    SmartFriendsIdentityError,
+    SmartFriendsNotConnected,
+    SmartFriendsProtocolError,
+    SmartFriendsServerError,
+    SmartFriendsSessionExpired,
+    SmartFriendsTimeout,
+)
+from .models import (
+    BoxIdentity,
+    CommandReceipt,
+    ConnectionState,
+    DeviceDefinition,
+    DeviceRecord,
+    DeviceValueRecord,
+    GatewayInfo,
+    GatewaySnapshot,
+    PositionSemantics,
+    RoomRecord,
+    Shutter,
+    ShutterMotion,
+)
+from .transport import create_pinned_ssl_context
+
+__version__ = "0.1.0"
+
+__all__ = [
+    "EVENT_AUTH_FAILED",
+    "EVENT_CONFIG_CHANGED",
+    "EVENT_CONNECTION",
+    "EVENT_DEVICE_INFO",
+    "EVENT_DEVICE_VALUE",
+    "EVENT_ERROR",
+    "EVENT_ROOM",
+    "EVENT_SNAPSHOT",
+    "BoxIdentity",
+    "ClientEvent",
+    "CommandReceipt",
+    "ConnectionState",
+    "DeviceDefinition",
+    "DeviceRecord",
+    "DeviceValueRecord",
+    "GatewayInfo",
+    "GatewaySnapshot",
+    "MdnsIdentity",
+    "PositionSemantics",
+    "RoomRecord",
+    "Shutter",
+    "ShutterMotion",
+    "SmartFriendsAuthenticationError",
+    "SmartFriendsCancelled",
+    "SmartFriendsCertificateError",
+    "SmartFriendsClient",
+    "SmartFriendsCommandRejected",
+    "SmartFriendsConnectionError",
+    "SmartFriendsError",
+    "SmartFriendsIdentityError",
+    "SmartFriendsNotConnected",
+    "SmartFriendsProtocolError",
+    "SmartFriendsServerError",
+    "SmartFriendsSessionExpired",
+    "SmartFriendsTimeout",
+    "__version__",
+    "async_probe_identity",
+    "create_pinned_ssl_context",
+    "normalize_mac",
+    "parse_mdns_identity",
+]

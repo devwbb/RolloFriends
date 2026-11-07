@@ -1,0 +1,5 @@
+# Home Assistant integration mapping/validation tests
+homeassistant==2026.11.0
+pytest>=9.0
+pytest-asyncio>=1.4
+aiohttp>=3.12

@@ -1,0 +1,62 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "SmartFriends-Box verbinden",
+        "description": "Gib die Adresse deiner SmartFriends-Box und ein SmartFriends-Benutzerkonto ein. Die Verbindung ist lokal; während der Einrichtung wird kein Rollladen bewegt.",
+        "data": {
+          "host": "IP-Adresse oder Hostname",
+          "port": "Port",
+          "username": "Benutzername",
+          "password": "Passwort"
+        }
+      },
+      "discovery_confirm": {
+        "title": "SmartFriends-Box bestätigen",
+        "description": "{name} wurde unter {host} gefunden. Gib die Zugangsdaten für diese Box ein. Während der Einrichtung wird kein Rollladen bewegt.",
+        "data": {
+          "username": "Benutzername",
+          "password": "Passwort"
+        }
+      },
+      "reauth_confirm": {
+        "title": "{name} erneut anmelden",
+        "description": "Die SmartFriends-Box hat die gespeicherten Zugangsdaten abgelehnt. Gib das aktuelle Passwort ein.",
+        "data": {
+          "password": "Passwort"
+        }
+      },
+      "reconfigure": {
+        "title": "{name} neu konfigurieren",
+        "description": "Ändere Adresse oder Benutzername dieser SmartFriends-Box. Das gespeicherte Passwort wird erneut geprüft.",
+        "data": {
+          "host": "IP-Adresse oder Hostname",
+          "port": "Port",
+          "username": "Benutzername"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Die SmartFriends-Box ist nicht erreichbar.",
+      "invalid_host": "Bitte eine IP-Adresse oder einen Hostnamen eingeben.",
+      "invalid_username": "Bitte einen Benutzernamen eingeben.",
+      "invalid_auth": "Die SmartFriends-Box hat die Zugangsdaten abgelehnt.",
+      "certificate_error": "Das TLS-Zertifikat der Box passt nicht zum hinterlegten Enexoma-Wurzelzertifikat.",
+      "no_supported_devices": "Die Box ist erreichbar, aber es wurden keine unterstützten Rollläden gefunden.",
+      "no_identity": "Die Box hat keine stabile Identität geliefert.",
+      "identity_mismatch": "Die erkannte Identität passt nicht zur angemeldeten Box.",
+      "unknown": "Unerwarteter Fehler bei der Kommunikation mit der SmartFriends-Box."
+    },
+    "abort": {
+      "already_configured": "Diese SmartFriends-Box ist bereits eingerichtet.",
+      "identity_mismatch": "Die erkannte Identität passt nicht zur angemeldeten Box.",
+      "no_identity": "Die Box hat keine stabile Identität geliefert.",
+      "not_smartfriends": "Der erkannte Dienst ist keine SmartFriends-Box.",
+      "cannot_connect": "Die SmartFriends-Box ist nicht erreichbar.",
+      "certificate_error": "Das TLS-Zertifikat der Box passt nicht zum hinterlegten Enexoma-Wurzelzertifikat.",
+      "reauth_successful": "Die erneute Anmeldung war erfolgreich.",
+      "reconfigure_successful": "Die Neukonfiguration war erfolgreich."
+    }
+  }
+}

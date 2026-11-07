@@ -1,0 +1,21 @@
+{
+  "domain": "smartfriends_box",
+  "name": "RolloFriends",
+  "codeowners": [
+    "@devwbb"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/devwbb/RolloFriends",
+  "integration_type": "hub",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/devwbb/RolloFriends/issues",
+  "loggers": [
+    "custom_components.smartfriends_box.vendor.aiosmartfriends"
+  ],
+  "requirements": [],
+  "version": "0.2.0-beta.1",
+  "zeroconf": [
+    "_smarthome._tcp.local.",
+    "_smartHOME._tcp.local."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "Connect SmartFriends Box",
+        "description": "Enter the address of your SmartFriends Box and a SmartFriends user account. The connection is local and no shutter is moved during setup.",
+        "data": {
+          "host": "IP address or hostname",
+          "port": "Port",
+          "username": "Username",
+          "password": "Password"
+        }
+      },
+      "discovery_confirm": {
+        "title": "Confirm SmartFriends Box",
+        "description": "Found {name} at {host}. Enter the credentials for this box. No shutter is moved during setup.",
+        "data": {
+          "username": "Username",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate {name}",
+        "description": "The SmartFriends Box rejected the stored credentials. Enter the current password.",
+        "data": {
+          "password": "Password"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure {name}",
+        "description": "Change the address or user name of this SmartFriends Box. The stored password is validated again.",
+        "data": {
+          "host": "IP address or hostname",
+          "port": "Port",
+          "username": "Username"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "The SmartFriends Box could not be reached.",
+      "invalid_host": "Enter an IP address or hostname.",
+      "invalid_username": "Enter a username.",
+      "invalid_auth": "The SmartFriends Box rejected the credentials.",
+      "certificate_error": "The TLS certificate of the box did not match the pinned Enexoma root.",
+      "no_supported_devices": "The box is reachable, but no supported shutters were found.",
+      "no_identity": "The box did not provide a stable identity.",
+      "identity_mismatch": "The discovered identity does not match the logged-in box.",
+      "unknown": "Unexpected error while talking to the SmartFriends Box."
+    },
+    "abort": {
+      "already_configured": "This SmartFriends Box is already configured.",
+      "identity_mismatch": "The discovered identity does not match the logged-in box.",
+      "no_identity": "The box did not provide a stable identity.",
+      "not_smartfriends": "The discovered service is not a SmartFriends Box.",
+      "cannot_connect": "The SmartFriends Box could not be reached.",
+      "certificate_error": "The TLS certificate of the box did not match the pinned Enexoma root.",
+      "reauth_successful": "Reauthentication was successful.",
+      "reconfigure_successful": "Reconfiguration was successful."
+    }
+  }
+}

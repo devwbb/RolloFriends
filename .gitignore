@@ -1,0 +1,33 @@
+# Local credentials and environment
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+.venv-ha/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Local live-test credentials and internal device-specific evidence
+smartfriends.local.json
+smartfriends.local.*.json
+internal/
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.orig
+*.rej
